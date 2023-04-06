@@ -17,11 +17,3 @@ import sectionPR from '@/components/sectionPR.vue'
     </section>
   </main>
 </template>
-
-<style scoped lang="scss">
-.bl_container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-</style>
