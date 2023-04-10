@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import { ref } from 'vue'
 
-const updateDate = '2023-04-06'
+const updateDate = '2023-04-10'
 </script>
 
 <template>
