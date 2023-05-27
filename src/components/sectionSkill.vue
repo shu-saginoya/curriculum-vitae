@@ -32,7 +32,7 @@ const skillList = [
       {
         name: 'Nuxt',
         started: '2021-04',
-        note: '大学図書館の案件でmicroCMSとNetlifyと組み合わせてJamstack構成で運営しています。3.0系についても試験的に利用しています。'
+        note: '大学図書館の案件などでmicroCMSとNetlifyと組み合わせてJamstack構成で運営しています。'
       },
       {
         name: 'その他・開発環境など',
