@@ -1,7 +1,50 @@
 <script setup lang="ts">
 import MainSection from '@/components/elements/MainSection.vue'
+import BlockTableSkill from '@/components/elements/BlockTableSkill.vue'
+import { useFormat } from '@/composables/useFormat'
 
 const title = 'PCスキル／テクニカルスキル'
+
+const { period } = useFormat()
+
+const items = [
+  {
+    cat: '担当業務',
+    class: [''],
+    years: [],
+    note: ''
+  },
+  {
+    cat: 'OS',
+    class: [''],
+    years: [],
+    note: ''
+  },
+  {
+    cat: '言語',
+    class: [''],
+    years: [],
+    note: ''
+  },
+  {
+    cat: 'フレームワーク',
+    class: [''],
+    years: [],
+    note: ''
+  },
+  {
+    cat: 'DB',
+    class: [''],
+    years: [],
+    note: ''
+  },
+  {
+    cat: 'その他',
+    class: [''],
+    years: [],
+    note: ''
+  }
+]
 
 const skillList = [
   {
@@ -98,41 +141,10 @@ const skillList = [
     ]
   }
 ]
-
-const period = (startedInfo: string): string => {
-  const started = new Date(startedInfo)
-  const isInvalidDate = started.getTime()
-  if (isInvalidDate) {
-    const daysMonth = 365 / 12
-    const daysYear = 365
-    const now = new Date()
-    const diff = now.getTime() - started.getTime()
-    let elapsedDay = Math.floor(diff / 86400000)
-    const elapsedYear = Math.floor(elapsedDay / daysYear)
-    elapsedDay -= elapsedYear * 365
-    const elapsedMonth = Math.floor(elapsedDay / daysMonth)
-    return `${elapsedYear}年${elapsedMonth}カ月`
-  } else {
-    return startedInfo
-  }
-}
 </script>
 
 <template>
   <MainSection :title="title">
-    <section v-for="category in skillList" :key="category.id" class="bl_card">
-      <h3>{{ category.name }}</h3>
-      <ul class="bl_skillList">
-        <li
-          v-for="(skill, index) in category.body"
-          :key="category.id + index"
-          class="bl_skillList_item"
-        >
-          <div>{{ skill.name }}</div>
-          <div class="bl_skillList_item_period">{{ period(skill.started) }}</div>
-          <div>{{ skill.note }}</div>
-        </li>
-      </ul>
-    </section>
+    <BlockTableSkill :items="items"></BlockTableSkill>
   </MainSection>
 </template>
