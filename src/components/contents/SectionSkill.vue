@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import MainSection from '@/components/elements/MainSection.vue'
+
+const title = 'PCスキル／テクニカルスキル'
+
 const skillList = [
   {
     name: 'フロントエンド',
@@ -115,8 +119,7 @@ const period = (startedInfo: string): string => {
 </script>
 
 <template>
-  <section class="bl_container">
-    <h2>テクニカルスキル</h2>
+  <MainSection :title="title">
     <section v-for="category in skillList" :key="category.id" class="bl_card">
       <h3>{{ category.name }}</h3>
       <ul class="bl_skillList">
@@ -131,23 +134,5 @@ const period = (startedInfo: string): string => {
         </li>
       </ul>
     </section>
-  </section>
+  </MainSection>
 </template>
-
-<style scoped lang="scss">
-.bl_skillList {
-  list-style: none;
-  padding-left: 0;
-}
-.bl_skillList_item {
-  display: grid;
-  grid-template-columns: 1fr 1fr 4fr;
-  padding: 4px 8px;
-  &:nth-child(even) {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-  &_period {
-    text-align: center;
-  }
-}
-</style>

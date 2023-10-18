@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import MainSection from '@/components/elements/MainSection.vue'
+
+const title = '自己PR'
+
 const PRs = [
   {
     title: '経歴の遍歴について',
@@ -109,8 +113,7 @@ const PRs = [
 </script>
 
 <template>
-  <section class="bl_container">
-    <h2>自己PR</h2>
+  <MainSection :title="title">
     <section v-for="(pr, index) in PRs" :key="index" class="bl_card">
       <h3>{{ pr.title }}</h3>
       <p>{{ pr.body }}</p>
@@ -122,19 +125,5 @@ const PRs = [
         </li>
       </ul>
     </section>
-  </section>
+  </MainSection>
 </template>
-
-<style scoped lang="scss">
-.bl_list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  list-style: none;
-  padding-left: 0;
-  font-size: 0.9rem;
-  &_item {
-    border-top: gray solid 1px;
-  }
-}
-</style>

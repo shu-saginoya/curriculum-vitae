@@ -1,19 +1,17 @@
 <script setup lang="ts">
-import sectionCareer from '@/components/sectionCareer.vue'
-import sectionSkill from '@/components/sectionSkill.vue'
-import sectionPR from '@/components/sectionPR.vue'
+import SectionSummary from '@/components/contents/SectionSummary.vue'
+import SectionStrengths from '@/components/contents/SectionStrengths.vue'
+import SectionCareer from '@/components/contents/SectionCareer.vue'
+import SectionSkill from '@/components/contents/SectionSkill.vue'
+import SectionPR from '@/components/contents/SectionPR.vue'
 </script>
 
 <template>
-  <main class="bl_container">
-    <section>
-      <sectionCareer></sectionCareer>
-    </section>
-    <section>
-      <sectionSkill></sectionSkill>
-    </section>
-    <section>
-      <sectionPR></sectionPR>
-    </section>
+  <main class="flex flex-col gap-8">
+    <SectionSummary></SectionSummary>
+    <SectionStrengths></SectionStrengths>
+    <SectionSkill></SectionSkill>
+    <SectionCareer></SectionCareer>
+    <SectionPR></SectionPR>
   </main>
 </template>

@@ -1,8 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import MainSection from '@/components/elements/MainSection.vue'
+
+const title = '職務経歴'
+</script>
 
 <template>
-  <section class="bl_container">
-    <h2>職務経歴</h2>
+  <MainSection :title="title">
     <section class="bl_card">
       <h3>株式会社大知／東京都品川区</h3>
       <p>期間：2007年4月～2009年3月</p>
@@ -73,5 +76,5 @@
         <li>スコットプランニングウェブサイト</li>
       </ul>
     </section>
-  </section>
+  </MainSection>
 </template>
