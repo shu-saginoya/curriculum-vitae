@@ -11,23 +11,26 @@ const headers = ['カテゴリ', '種別', '経験年数', 'スキルレベル�
 </script>
 
 <template>
-  <table>
-    <tr>
-      <th v-for="(header, hIndex) in headers" :key="hIndex">{{ header }}</th>
-    </tr>
-    <tr v-for="(item, index) in items" :key="index">
-      <td>{{ item.cat }}</td>
-      <td>
-        <ul>
-          <li v-for="(cItem, cIndex) in item.class" :key="cIndex">{{ cItem }}</li>
-        </ul>
-      </td>
-      <td>
-        <ul>
-          <li v-for="(yItem, yIndex) in item.years" :key="yIndex">{{ yItem }}</li>
-        </ul>
-      </td>
-      <td>{{ item.note }}</td>
-    </tr>
-  </table>
+  <ul class="border-2 border-slate-600 divide-y-2 divide-slate-600">
+    <li class="grid grid-cols-6 divide-x-2 divide-slate-600 bg-slate-200 text-center">
+      <div class="p-1">{{ headers[0] }}</div>
+      <div class="p-1">{{ headers[1] }}</div>
+      <div class="p-1">{{ headers[2] }}</div>
+      <div class="p-1 col-span-3">{{ headers[3] }}</div>
+    </li>
+    <li
+      v-for="(item, index) in items"
+      :key="index"
+      class="grid grid-cols-6 divide-x-2 divide-slate-600"
+    >
+      <div class="p-1">{{ item.cat }}</div>
+      <div class="p-1">
+        <p v-for="(cItem, cIndex) in item.class" :key="cIndex">{{ cItem }}</p>
+      </div>
+      <div class="p-1">
+        <p v-for="(yItem, yIndex) in item.years" :key="yIndex">{{ yItem }}</p>
+      </div>
+      <div class="p-1 col-span-3">{{ item.note }}</div>
+    </li>
+  </ul>
 </template>

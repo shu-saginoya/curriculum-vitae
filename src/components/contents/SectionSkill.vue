@@ -10,9 +10,9 @@ const { period } = useFormat()
 const items = [
   {
     cat: '担当業務',
-    class: [''],
-    years: [],
-    note: ''
+    class: ['aaa', 'bbb'],
+    years: [3, 4],
+    note: 'あいうえ'
   },
   {
     cat: 'OS',
