@@ -11,6 +11,7 @@ const engName = 'Shu Saginoya'
     <header>
       <nav class="print:hidden bg-slate-700 text-white flex gap-4 px-6">
         <RouterLink to="/">HOME</RouterLink>
+        <RouterLink to="/samples">制作実績</RouterLink>
         <RouterLink to="/books">参考書籍</RouterLink>
       </nav>
       <h1 class="text-xl font-bold tracking-widest text-center pt-10">職務経歴書</h1>

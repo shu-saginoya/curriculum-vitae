@@ -33,21 +33,6 @@ const PRs = [
     title: 'サンプル',
     body: [
       '外部に公開できないソースコードが多いためサンプルが少ないのですが参考にしていただければと思います。'
-    ],
-    list: [
-      {
-        name: '書籍の購読申込フォーム (Vue3・Typescript・SCSSなど)',
-        src: 'https://github.com/shu-saginoya/example-form'
-      },
-      {
-        name: '大学図書館（Nuxt2・microCMS）',
-        src: 'https://www.library.ferris.ac.jp/',
-        note: '現在Nuxt3に移行作業をすすめています。'
-      },
-      {
-        name: '真空ポンプの会社(Wordpress)',
-        src: 'http://www.skott.co.jp/'
-      }
     ]
   }
 ]
