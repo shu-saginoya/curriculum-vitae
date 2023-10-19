@@ -1,14 +1,69 @@
 <script setup lang="ts">
 import MainSection from '@/components/elements/MainSection.vue'
+import BlockCareer from '@/components/elements/BlockCareer.vue'
 
 const title = '職務経歴'
+
+const careers = [
+  {
+    name: '株式会社大知',
+    period: ['2007年4月', '2009年3月'],
+    capital: '1500万円',
+    employees: 10,
+    items: [
+      {
+        period: 'あああ',
+        contents: 'いいい',
+        organization: 'ううう'
+      }
+    ]
+  },
+  {
+    name: '株式会社ヘレナメディアリサーチ',
+    period: ['2011年2月', '2014年5月'],
+    capital: '1000万円',
+    employees: 15,
+    items: [
+      {
+        period: 'あああ',
+        contents: 'いいい',
+        organization: 'ううう'
+      }
+    ]
+  },
+  {
+    name: '株式会社日報（株式会社クリエイト日報）',
+    period: ['2014年9月', '現在'],
+    capital: '9000万円',
+    employees: 100,
+    items: [
+      {
+        period: 'あああ',
+        contents: 'いいい',
+        organization: 'ううう'
+      }
+    ]
+  }
+]
 </script>
 
 <template>
   <MainSection :title="title">
-    <section class="bl_card">
-      <h3>株式会社大知／東京都品川区</h3>
-      <p>期間：2007年4月～2009年3月</p>
+    <div class="flex flex-col gap-6">
+      <BlockCareer
+        v-for="(career, index) in careers"
+        :key="index"
+        :name="career.name"
+        :period="career.period"
+        :capital="career.capital"
+        :employees="career.employees"
+        :items="career.items"
+      ></BlockCareer>
+    </div>
+  </MainSection>
+  <!--     <section class="bl_card">
+      <h3>／東京都品川区</h3>
+      <p>期間：～</p>
       <h4>概要</h4>
       <ul>
         <li>教科書や教育関連の書籍のDTPやイラスト制作</li>
@@ -75,6 +130,5 @@ const title = '職務経歴'
         <li>フェリス女学院大学や附属図書館などの関連ウェブサイト</li>
         <li>スコットプランニングウェブサイト</li>
       </ul>
-    </section>
-  </MainSection>
+    </section> -->
 </template>
