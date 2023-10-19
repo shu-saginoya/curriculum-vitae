@@ -45,6 +45,10 @@ const books = [
     note: '著・平野昌士（翔泳社）'
   },
   {
+    name: '技術の泉シリーズ　Nuxt3＋Firebase 捨てられるWebアプリケーション設計',
+    note: '著・福田雄貴（インプレス NextPublishing）'
+  },
+  {
     name: 'UIデザイン必携',
     note: '著・原田秀司（翔泳社）'
   },
@@ -67,6 +71,10 @@ const books = [
   {
     name: 'Software Design 2022年2月号',
     note: '主な特集「JavaScriptの関数を極める」「GitHub Actionsで簡単・快適CI／CD」（技術評論社）'
+  },
+  {
+    name: 'Software Design 2023年9月号',
+    note: '主な特集「JavaScript非同期処理の疑問を解き明かす」（技術評論社）'
   }
 ]
 </script>
