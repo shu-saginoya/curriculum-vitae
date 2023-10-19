@@ -3,7 +3,10 @@ defineProps<{
   items: {
     period: string
     contents: string
+    job: string
     organization: string
+    role: string
+    env: string
   }[]
 }>()
 const headers = ['期間', '業務内容', '組織／役割']
@@ -22,11 +25,29 @@ const headers = ['期間', '業務内容', '組織／役割']
       class="grid grid-cols-8 divide-x-2 divide-slate-600"
     >
       <div class="p-1">{{ item.period }}</div>
-      <div class="p-1 col-span-6">
-        {{ item.contents }}
+      <div class="p-1 col-span-6 flex flex-col justify-between gap-4">
+        <div>
+          <p>【プロジェクト内容】</p>
+          {{ item.contents }}
+        </div>
+        <div class="border-t-2 border-dotted">
+          <p>【担当業務】</p>
+          {{ item.job }}
+        </div>
       </div>
-      <div class="p-1">
-        {{ item.organization }}
+      <div class="p-1 flex flex-col justify-between gap-4">
+        <div>
+          <p>【組織】</p>
+          {{ item.organization }}
+        </div>
+        <div>
+          <p>【役割】</p>
+          {{ item.role }}
+        </div>
+        <div class="border-t-2 border-dotted">
+          <p>【言語・環境】</p>
+          {{ item.env }}
+        </div>
       </div>
     </li>
   </ul>

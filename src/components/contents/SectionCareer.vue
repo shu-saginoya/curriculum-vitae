@@ -13,8 +13,11 @@ const careers = [
     items: [
       {
         period: 'あああ',
+        job: 'aaaa',
         contents: 'いいい',
-        organization: 'ううう'
+        organization: 'ううう',
+        role: 'bbbbb',
+        env: 'cccccc'
       }
     ]
   },
@@ -26,8 +29,11 @@ const careers = [
     items: [
       {
         period: 'あああ',
+        job: 'aaaa',
         contents: 'いいい',
-        organization: 'ううう'
+        organization: 'ううう',
+        role: 'bbbbb',
+        env: 'cccccc'
       }
     ]
   },
@@ -39,8 +45,11 @@ const careers = [
     items: [
       {
         period: 'あああ',
+        job: 'aaaa',
         contents: 'いいい',
-        organization: 'ううう'
+        organization: 'ううう',
+        role: 'bbbbb',
+        env: 'cccccc'
       }
     ]
   }
