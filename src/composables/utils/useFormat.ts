@@ -1,6 +1,6 @@
 export const useFormat = () => {
-  const period = (startedInfo: string): string => {
-    const started = new Date(startedInfo)
+  const yearsExp = (date: string): number => {
+    const started = new Date(date)
     const isInvalidDate = started.getTime()
     if (isInvalidDate) {
       const daysMonth = 365 / 12
@@ -11,13 +11,13 @@ export const useFormat = () => {
       const elapsedYear = Math.floor(elapsedDay / daysYear)
       elapsedDay -= elapsedYear * 365
       const elapsedMonth = Math.floor(elapsedDay / daysMonth)
-      return `${elapsedYear}年${elapsedMonth}カ月`
+      return elapsedYear
     } else {
-      return startedInfo
+      return 0
     }
   }
 
   return {
-    period
+    yearsExp
   }
 }
