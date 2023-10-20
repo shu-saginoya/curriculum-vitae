@@ -2,9 +2,12 @@
 import BlockTableCareer from '@/components/elements/BlockTableCareer.vue'
 
 type Item = {
-  period: string
-  contents: string
+  period: string[]
+  contents: string[]
+  job: string[]
   organization: string
+  role: string
+  env: string[]
 }
 defineProps<{
   name: string
