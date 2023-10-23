@@ -9,15 +9,8 @@ const title = 'PCスキル／テクニカルスキル'
 const items = [
   {
     cat: '担当業務',
-    class: ['要件定義', '基本設計', '詳細設計', '実装', 'テスト', '運用保守'],
-    years: [
-      yearsExp('2021-04'),
-      yearsExp('2021-04'),
-      yearsExp('2021-04'),
-      yearsExp('2014-09'),
-      0,
-      yearsExp('2014-09')
-    ],
+    class: ['実装', 'テスト', '運用保守'],
+    years: [yearsExp('2014-09'), 0, yearsExp('2014-09')],
     note: ['メンバーとしてクライアントとのやり取り経験あり']
   },
   {
