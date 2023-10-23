@@ -20,7 +20,7 @@ const engName = 'Shu Saginoya'
           <time>{{ updateDate }}</time> 現在
         </li>
         <li>
-          氏名： {{ name }}<span class="text-sm">({{ engName }})</span>
+          氏名： {{ name }}<span class="text-sm"> ({{ engName }})</span>
         </li>
       </ul>
     </header>
