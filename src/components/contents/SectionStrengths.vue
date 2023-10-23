@@ -4,7 +4,6 @@ import BlockList from '@/components/elements/BlockList.vue'
 
 const title = '得意とする分野・スキル'
 const list = [
-  '出版・広告業界の業界知識',
   'HTML/CSS/JavaScript/TypeScriptによるwebサイト/webアプリケーションの基本設計/詳細設計/実装/コーディング/テスト/運用保守',
   'Vue.js/Nuxt.jsのフレームワークを用いた開発',
   'フロントエンドからバックエンドまでの開発',
