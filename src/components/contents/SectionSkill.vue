@@ -17,7 +17,7 @@ const items = [
     cat: 'OS',
     class: ['Windows'],
     years: [yearsExp('2014-09')],
-    note: ['通常使用に問題なしで、指導も可能']
+    note: ['通常使用に問題なし']
   },
   {
     cat: '言語',
@@ -43,7 +43,7 @@ const items = [
     cat: 'フレームワーク',
     class: ['Vue.js', 'Nuxt'],
     years: [yearsExp('2021-04'), yearsExp('2021-04')],
-    note: ['通常使用に問題なしで、指導も可能', '通常使用に問題なしで、指導も可能']
+    note: ['通常使用に問題なし', '通常使用に問題なし']
   },
   {
     cat: 'DB',
