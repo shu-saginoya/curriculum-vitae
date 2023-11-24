@@ -1,17 +1,15 @@
 <script setup lang="ts">
-import SectionSummary from '@/components/contents/SectionSummary.vue'
-import SectionStrengths from '@/components/contents/SectionStrengths.vue'
-import SectionCareer from '@/components/contents/SectionCareer.vue'
-import SectionSkill from '@/components/contents/SectionSkill.vue'
-import SectionPR from '@/components/contents/SectionPR.vue'
+import BlockHeadingVue from '@/components/elements/BlockHeading.vue'
+import SectionLinks from '@/components/contents/SectionLinks.vue'
+import SectionSNS from '@/components/contents/SectionSNS.vue'
 </script>
 
 <template>
   <main class="flex flex-col gap-8">
-    <SectionSummary></SectionSummary>
-    <SectionStrengths></SectionStrengths>
-    <SectionSkill></SectionSkill>
-    <SectionCareer></SectionCareer>
-    <SectionPR></SectionPR>
+    <BlockHeadingVue title="ポートフォリオ">
+      <p class="text-center">鷺野谷 周 - Saginoya shu</p>
+    </BlockHeadingVue>
+    <SectionLinks />
+    <SectionSNS />
   </main>
 </template>

@@ -1,32 +1,23 @@
 <script setup lang="ts">
-import { RouterView, RouterLink } from 'vue-router'
+import { RouterView } from 'vue-router'
+import { useLinks } from '@/composables/useLinks'
+import BtnHeadNav from '@/components/elements/BtnHeadNav.vue'
 
-const updateDate = '2023年10月18日'
-const name = '鷺野谷 周'
-const engName = 'Shu Saginoya'
+const { links } = useLinks()
 </script>
 
 <template>
-  <div class="max-w-4xl mx-auto">
-    <header>
-      <nav class="print:hidden bg-slate-700 text-white flex gap-4 px-6">
-        <RouterLink to="/">HOME</RouterLink>
-        <RouterLink to="/samples">制作実績</RouterLink>
-        <RouterLink to="/books">参考書籍</RouterLink>
-      </nav>
-      <h1 class="text-xl font-bold tracking-widest text-center pt-10">職務経歴書</h1>
-      <ul class="text-right">
-        <li>
-          <time>{{ updateDate }}</time> 現在
-        </li>
-        <li>
-          氏名： {{ name }}<span class="text-sm"> ({{ engName }})</span>
-        </li>
-      </ul>
-    </header>
+  <header
+    class="print:hidden bg-slate-700 text-white flex justify-between py-2 px-6 fixed top-0 w-full"
+  >
+    <p class="font-bold">ポートフォリオ</p>
+    <nav class="flex gap-4">
+      <BtnHeadNav v-for="link in links" :key="link.to" :to="link.to">
+        {{ link.name }}
+      </BtnHeadNav>
+    </nav>
+  </header>
+  <div class="max-w-4xl mx-auto my-8">
     <RouterView />
-    <footer class="pb-10">
-      <p class="text-right">以上</p>
-    </footer>
   </div>
 </template>

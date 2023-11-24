@@ -1,12 +1,12 @@
 <script setup lang="ts">
 defineProps<{
-  title: string
+  title?: string
 }>()
 </script>
 
 <template>
   <section>
-    <h2 class="text-lg font-bold">■ {{ title }}</h2>
+    <h2 v-if="title" class="text-lg font-bold">■ {{ title }}</h2>
     <slot />
   </section>
 </template>
